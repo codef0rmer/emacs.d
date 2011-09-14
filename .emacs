@@ -36,5 +36,6 @@
 ;;; load color theme
 (require 'color-theme-tangotango)
 (color-theme-tangotango)
-;;;(require 'color-theme-zenburn)
-;;;(color-theme-zenburn)
+
+;;;enable whitespace mode
+;;;(global-whitespace-mode 1)
