@@ -7,9 +7,9 @@
 
 
 ;;; Auto Complete Mode
-(add-to-list 'load-path "/home/amitg/.emacs.d/")
+(add-to-list 'load-path "/home/codef0rmer/.emacs.d/")
 (require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "/home/amitg/.emacs.d//ac-dict")
+(add-to-list 'ac-dictionary-directories "/home/codef0rmer/.emacs.d//ac-dict")
 (ac-config-default)
 
 ;;; load path
@@ -39,3 +39,9 @@
 
 ;;;enable whitespace mode
 ;;;(global-whitespace-mode 1)
+
+;;; Javascript Mode 
+(require 'generic-x)
+(when (locate-library "javascript")
+  (autoload 'javascript-mode "javascript" nil t)
+  (add-to-list 'auto-mode-alist '("\\.js\\'" . javascript-mode)))
