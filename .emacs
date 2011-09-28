@@ -33,14 +33,19 @@
  )
 
 ;;; load color theme
-;;; load color theme
 (require 'color-theme-tangotango)
 (color-theme-tangotango)
 
-;;;enable whitespace mode
+;;; show paren Mode
+(show-paren-mode 1)
+
+;;; final newline
+;;;(require-final-newline t)
+
+;;; whitespace-mode
 ;;;(global-whitespace-mode 1)
 
-;;; Javascript Mode 
+;;; Javascript Mode
 (require 'generic-x)
 (when (locate-library "javascript")
   (autoload 'javascript-mode "javascript" nil t)
