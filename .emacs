@@ -40,7 +40,7 @@
 (show-paren-mode 1)
 
 ;;; final newline
-;;;(require-final-newline t)
+(require-final-newline t)
 
 ;;; whitespace-mode
 ;;;(global-whitespace-mode 1)
