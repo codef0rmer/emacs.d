@@ -5,14 +5,13 @@
 ;;; Marmalade
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 
-
 ;;; Auto Complete Mode
 (add-to-list 'load-path "/home/codef0rmer/.emacs.d/")
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "/home/codef0rmer/.emacs.d//ac-dict")
 (ac-config-default)
 
-;;; load path
+;;; Load path
 (add-to-list 'load-path "~/.emacs.d")
 
 ;;; load php mode
@@ -32,21 +31,23 @@
   ;; If there is more than one, they won't work right.
  )
 
-;;; load color theme
+;;; Load color theme
 (require 'color-theme-tangotango)
 (color-theme-tangotango)
 
-;;; show paren Mode
+;;; Show paren-mode
 (show-paren-mode 1)
 
-;;; final newline
-(require-final-newline t)
-
-;;; whitespace-mode
+;;; Enable whitespace-mode
 ;;;(global-whitespace-mode 1)
 
-;;; Javascript Mode
+;;; Enable Javascript Mode
 (require 'generic-x)
 (when (locate-library "javascript")
-  (autoload 'javascript-mode "javascript" nil t)
-  (add-to-list 'auto-mode-alist '("\\.js\\'" . javascript-mode)))
+  (autoload 'js2-mode "js2" nil t)
+  (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
+
+;;; Disable indent-tabs Mode
+(setq c-basic-indent 2)
+(setq tab-width 2)
+(setq indent-tabs-mode nil)
