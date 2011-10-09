@@ -48,6 +48,8 @@
   (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 
 ;;; Disable indent-tabs Mode
-(setq c-basic-indent 2)
-(setq tab-width 2)
+;;;(setq c-basic-indent 2)
+;;;(setq tab-width 2)
 (setq indent-tabs-mode nil)
+
+(set-default-font "Inconsolata-12")
