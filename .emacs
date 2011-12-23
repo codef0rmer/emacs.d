@@ -6,9 +6,9 @@
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 
 ;;; Auto Complete Mode
-(add-to-list 'load-path "/home/codef0rmer/.emacs.d/")
+(add-to-list 'load-path "~/.emacs.d/")
 (require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "/home/codef0rmer/.emacs.d//ac-dict")
+(add-to-list 'ac-dictionary-directories "~/.emacs.d//ac-dict")
 (ac-config-default)
 
 ;;; Load path
@@ -38,18 +38,17 @@
 ;;; Show paren-mode
 (show-paren-mode 1)
 
-;;; Enable whitespace-mode
-;;;(global-whitespace-mode 1)
-
 ;;; Enable Javascript Mode
 (require 'generic-x)
 (when (locate-library "javascript")
   (autoload 'js2-mode "js2" nil t)
-  (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
+  (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode)))
 
 ;;; Disable indent-tabs Mode
-;;;(setq c-basic-indent 2)
-;;;(setq tab-width 2)
-(setq indent-tabs-mode nil)
+;;(setq-default-tab-width 4)
+;;(setq-default tab-stop-list '(4 8 12 16 20 24 28 32 36 40 44 48 52 56 60 64 68 72 76 80))
+;;(setq-default indent-tabs-mode nil)
 
+;;; Set Default font
 (set-default-font "Inconsolata-12")
+
